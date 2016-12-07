@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="Model.Flight" table="flight">
+		<meta attribute="class-description">
+			This class contains the user detail.
+		</meta>
+		<id name="id" type="int" column="idFlight">
+			<generator class="native" />
+		</id>
+		<property name="number" column="number" type="int" />
+		<property name="airplaneType" column="airplaneType" type="string" />
+		<property name="departureDate" column="departureDate" type="java.sql.Timestamp" />
+		<property name="arrivalDate" column="arrivalDate" type="java.sql.Timestamp" />
+		<property name="departureCity" column="departureCity" type="int" />
+		<property name="arrivalCity" column="arrivalCity" type="int" />
+	</class>
+</hibernate-mapping>
